@@ -1,0 +1,10 @@
+-- ******* How Changes are captured ********
+USE STREAMS_DB_OFFSET.PUBLIC;
+
+SELECT * FROM SALES_RAW_STAGING;     
+        
+SELECT * FROM SALES_STREAM;
+
+UPDATE SALES_RAW_STAGING
+SET PRODUCT ='Potato' WHERE PRODUCT = 'Banana';
+SET PRODUCT ='Potato-NEW' WHERE PRODUCT = 'Potato';
